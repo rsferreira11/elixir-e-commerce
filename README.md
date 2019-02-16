@@ -1,4 +1,6 @@
-# Mango
+# Mango E-commerce
+
+E-commerce system developed with Elixir and Phoenix Framework based on the book "Mastering Phoenix Framework" written by Shankar Dhanasekaran.
 
 To start your Phoenix server:
 
