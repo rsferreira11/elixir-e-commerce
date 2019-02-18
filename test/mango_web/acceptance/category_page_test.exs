@@ -1,5 +1,5 @@
 defmodule MangoWeb.Acceptance.CategoryPageTest do
-  use ExUnit.Case
+  use Mango.DataCase
   use Hound.Helpers
 
   hound_session()
@@ -8,6 +8,12 @@ defmodule MangoWeb.Acceptance.CategoryPageTest do
     ## GIVEN ##
     # There are two products Apple and Tomate priced 100 and 50
     # categorized under 'fruits' and 'vegetables' respectively
+    alias Mango.{Catalog, Repo}
+    alias Catalog.Product
+
+    Repo.insert %Product{ name: "Tomato", price: 50, sku: "A123", is_seasonal: false, category: "vegetables" }
+    Repo.insert %Product{ name: "Apple", price: 100, sku: "B232", is_seasonal: true, category: "fruits" }
+
     :ok
   end
 
